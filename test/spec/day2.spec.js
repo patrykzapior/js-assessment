@@ -1,6 +1,6 @@
 describe('day2', function () {
     var answer = window.day2;
-    describe('createArrayObject', function () {
+    ddescribe('createArrayObject', function () {
         it('should return array object numeric', function () {
             expect(answer.createArrayObject(15, 1, 3)).toEqual({property1: 15, property2: 1, property3: 3});
         });
@@ -11,7 +11,7 @@ describe('day2', function () {
             expect(answer.createArrayObject(undefined, 'asd', 3)).toEqual({property1: undefined, property2: 'asd', property3: 3});
         });
     });
-    describe("testIsAnyReturnFunction", function () {
+    ddescribe("testIsAnyReturnFunction", function () {
         it('should return true', function () {
             expect(answer.testIsAnyReturnFunction(true)).toBeTruthy();
             expect(answer.testIsAnyReturnFunction(true)).toEqual(true);
@@ -21,7 +21,7 @@ describe('day2', function () {
             expect(answer.testIsAnyReturnFunction(false)).toBeFalsy();
         });
     });
-    describe("arrayFunction", function () {
+    ddescribe("arrayFunction", function () {
         it('Should return depends of index even a square not even cube. ', function () {
             expect(answer.arrayFunction([1, 2, 3, 4])).toEqual([ 1, 8, 9, 64 ]);
         });
@@ -34,7 +34,7 @@ describe('day2', function () {
             expect(answer.addPropertiesToObjectCheckNumber({properties1: 20, properties2: 30}, 'properties3', 'asd')).toEqual({properties1: 20, properties2: 30, properties3: 'asd'});
         });
     });
-    describe('multiplyElementOfArray', function () {
+    ddescribe('multiplyElementOfArray', function () {
 
         it('should array where elements with odd index are multiply by 4 and even index element are multiply by 3', function () {
             expect(answer.multiplyElementOfArray([2, 3, 4, 5])).toEqual([6, 12, 12, 20]);
@@ -45,12 +45,12 @@ describe('day2', function () {
         });
 
         it('should return  array with multiply numbers elements and unchanged string element when input is a string and number array', function () {
-            expect(answer.multiplyElementOfArray(["a", 2, "c", 3])).toEqual(["a", 8, "c", 12]);
+            expect(answer.multiplyElementOfArray(["a", 2, "c", 3])).toEqual(["a", 6, "c", 12]);
         });
 
     });
 
-    describe('maxArray', function () {
+    ddescribe('maxArray', function () {
 
         it('should return max element from array', function () {
             expect(answer.maxArray([2, 5, 7, 1, 3, 20, 10, 19])).toEqual(20);
@@ -65,7 +65,7 @@ describe('day2', function () {
         });
     });
 
-    describe('swapString', function () {
+    ddescribe('swapString', function () {
 
         it('should swap string in array', function () {
             expect(answer.swapString(["ala", "ma", "kota"], "ala", "marysia")).toEqual(["marysia", "ma", "kota"]);
@@ -75,7 +75,7 @@ describe('day2', function () {
         });
     });
 
-    describe('getObject', function () {
+    ddescribe('getObject', function () {
 
         var list = [
             {name: "Jan", age: 10},
@@ -93,7 +93,7 @@ describe('day2', function () {
         });
     });
 
-    describe('doAdult', function () {
+    ddescribe('doAdult', function () {
 
         var list = [
             {name: "Jan", age: 10},
@@ -118,7 +118,7 @@ describe('day2', function () {
         });
 
     });
-    describe('findTheBiggerBox', function () {
+    ddescribe('findTheBiggerBox', function () {
         it('should return 2 (#box)', function () {
             expect(answer.findTheBiggerBox(8, 6, 5)).toEqual(2);
         });
@@ -131,7 +131,7 @@ describe('day2', function () {
 
 
     });
-    describe('makePerson', function () {
+    ddescribe('makePerson', function () {
         it('should return object Dawid Zegar', function () {
             expect(answer.makePerson("Dawid", "Zegar", 23)).toEqual({firstName: "Dawid", lastName: "Zegar", age: 23});
         });
@@ -141,7 +141,7 @@ describe('day2', function () {
 
 
     });
-    describe('invertString', function () {
+    ddescribe('invertString', function () {
 
         it('should return 1tseT', function () {
             expect(answer.invertString("Test1")).toEqual("1tseT");
@@ -152,7 +152,7 @@ describe('day2', function () {
 
 
     });
-    describe('factorial', function () {
+    ddescribe('factorial', function () {
 
         it('should return [1, 1]', function () {
             expect(answer.factorial(1)).toEqual([1, 1]);
@@ -162,7 +162,7 @@ describe('day2', function () {
         });
 
     });
-    describe('sumObject', function () {
+    ddescribe('sumObject', function () {
 
         it('should return 38', function () {
             expect(answer.sumObject({param0: 2, param1: 5, param2: 9, param3: 2, param4: 20})).toEqual(38);
