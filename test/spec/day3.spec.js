@@ -91,7 +91,7 @@
             });
         });
 
-        describe("Number.prototype.maxValueFromTwoArguments", function () {
+        ddescribe("Number.prototype.maxValueFromTwoArguments", function () {
             it('Should return max value from two arguments and this', function () {
                 var temp = 123;
                 expect(temp.maxValueFromTwoArguments(1, 200)).toEqual(200);
