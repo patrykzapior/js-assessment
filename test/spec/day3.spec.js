@@ -2,7 +2,7 @@
     describe('day3', function () {
         var answer = window.day3;
 
-        describe('book.delProperty', function () {
+        ddescribe('book.delProperty', function () {
             it('should return book without numPages', function () {
                 expect(answer.book.delProperty("numPages")).toEqual({title: "Kot w butach", author: "Jan Kowalski", comments: "Good book!", delProperty: jasmine.any(Function)});
             });
@@ -14,7 +14,7 @@
         });
 
 
-        describe('propertyNames', function () {
+        ddescribe('propertyNames', function () {
             it('should array of property names and values', function () {
                 expect(answer.propertyNames({name: "Jan", age: 34})).toEqual([
                     ["name", "Jan"],
@@ -30,8 +30,8 @@
 
 
         });
-        describe('mergeObject', function () {
-            it('should return one object cointins all atributes', function () {
+        ddescribe('mergeObject', function () {
+            it('should return one object cointeins all atributes', function () {
                 expect(answer.mergeObject({name: "Jan", age: 34}, {title: "Kot w butach", comments: "Good book!"})).toEqual({ name: 'Jan', age: 34, title: 'Kot w butach', comments: 'Good book!' });
             });
             it("should return false if any arguement are string", function () {
@@ -43,7 +43,7 @@
 
 
         });
-        describe('countVowes', function () {
+        ddescribe('countVowes', function () {
             it("should return 4", function () {
                 expect("String Testowy".countVowels()).toEqual(4);
             });
@@ -52,7 +52,7 @@
             });
 
         });
-        describe('arrayToString', function () {
+        ddescribe('arrayToString', function () {
             it("should return 'raz dwa trzy'", function () {
                 expect(["raz", "dwa", "trzy"].arrayToString()).toEqual("raz dwa trzy");
             });
@@ -77,7 +77,7 @@
             });
         });
 
-        describe("Number.prototype.addNumber", function () {
+        ddescribe("Number.prototype.addNumber", function () {
             it('Should return added two numbers', function () {
                 var temp = 123;
                 expect(temp.addNumber(5)).toEqual(128);
