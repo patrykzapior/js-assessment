@@ -66,7 +66,7 @@
 
         });
 
-        describe("countCharInProperties", function () {
+        ddescribe("countCharInProperties", function () {
             it('Should return value exist a letter in name properties', function () {
                 expect(answer.countCharInProperties(answer.aqurium, 'a')).toEqual(7);
                 expect(answer.countCharInProperties(answer.aqurium, 'b')).toEqual(0);
@@ -102,7 +102,7 @@
                 expect(temp.maxValueFromTwoArguments(34525, 213)).toEqual(34525);
             });
         });
-        describe('getWidth', function () {
+        ddescribe('getWidth', function () {
             it('should return array of width', function () {
                 expect(answer.getWidth(answer.boxlist)).toEqual(["box1: 5", "box2: 2", "box3: 7"]);
 
@@ -113,14 +113,14 @@
             });
         });
 
-        describe('getVolume', function () {
+        ddescribe('getVolume', function () {
             it('should return volume of boxes in string array, last element should be sum of all volumes saved as number', function () {
                 expect(answer.getVolume(answer.boxlist)).toEqual(["box1 volume: 250", "box2 volume: 98", "box3 volume: 350", 698]);
             });
 
         });
 
-        describe('getMaxVolume', function () {
+        ddescribe('getMaxVolume', function () {
             it('should max volume from array contains boxes', function () {
                 expect(answer.getMaxVolume(answer.boxlist)).toEqual(350);
             });

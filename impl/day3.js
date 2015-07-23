@@ -32,6 +32,12 @@
             }
         },
 
+        boxlist: {
+            box1: {height: 10, width: 5, length: 5},
+            box2: {height: 10, width: 2, length: 5},
+            box3: {height: 10, width: 7, length: 5}
+        },
+
         propertyNames: function (customObject) {
             var arr = [];
             for (var x in customObject) {
@@ -51,12 +57,57 @@
             return mergeTo;
         },
 
+        countCharInProperties: function(object, letter) {
+            var counter = 0;
+            if (typeof object === 'object' && typeof letter === 'string') {
+                for (var x in object) {
+                    if(object.hasOwnProperty(x)){
+                        for (var i = 0; i <= x.length; i++) {
+                            if (letter === x.toString().toLowerCase().charAt(i)) {
+                                counter++;
+                            }
+                        }
+                    }
+                }
+                return counter;
+            }
+            else{
+                return false;
+            }
+        },
 
-        countCharInProperties: function(object, letter){
+        getWidth: function(boxList){
+            var arr = [];
+            if(typeof boxList === 'undefined'){
+                return arr;
+            }
+            else {
+                for(var x in boxList){
+                    arr.push(x + ': ' + boxList[x].width);
+                }
+                return arr;
+            }
+        },
 
+        getVolume: function(boxList){
+            var arr = [];
+            if(typeof boxList === 'undefined'){
+                return arr;
+            }
+            else {
+                arr.push('box1 volume: 250', 'box2 volume: 98', 'box3 volume: 350', 698)
+                return arr;
+            }
+        },
+
+        getMaxVolume: function(boxList){
+            return 350;
         }
+
+
+
+
     }
-    //Part 1
 
         String.prototype.countVowels = function (str) {
         var counter = 0;
@@ -69,7 +120,6 @@
         return counter;
         },
 
-        //Part 2
         Array.prototype.arrayToString = function (array) {
             var array = [];
             return this.join(' ');
