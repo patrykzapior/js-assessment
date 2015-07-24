@@ -2,7 +2,7 @@
     describe('day3', function () {
         var answer = window.day3;
 
-        ddescribe('book.delProperty', function () {
+        describe('book.delProperty', function () {
             it('should return book without numPages', function () {
                 expect(answer.book.delProperty("numPages")).toEqual({title: "Kot w butach", author: "Jan Kowalski", comments: "Good book!", delProperty: jasmine.any(Function)});
             });
@@ -14,7 +14,7 @@
         });
 
 
-        ddescribe('propertyNames', function () {
+        describe('propertyNames', function () {
             it('should array of property names and values', function () {
                 expect(answer.propertyNames({name: "Jan", age: 34})).toEqual([
                     ["name", "Jan"],
@@ -30,7 +30,7 @@
 
 
         });
-        ddescribe('mergeObject', function () {
+        describe('mergeObject', function () {
             it('should return one object cointeins all atributes', function () {
                 expect(answer.mergeObject({name: "Jan", age: 34}, {title: "Kot w butach", comments: "Good book!"})).toEqual({ name: 'Jan', age: 34, title: 'Kot w butach', comments: 'Good book!' });
             });
@@ -43,7 +43,7 @@
 
 
         });
-        ddescribe('countVowes', function () {
+        describe('countVowes', function () {
             it("should return 4", function () {
                 expect("String Testowy".countVowels()).toEqual(4);
             });
@@ -52,7 +52,7 @@
             });
 
         });
-        ddescribe('arrayToString', function () {
+        describe('arrayToString', function () {
             it("should return 'raz dwa trzy'", function () {
                 expect(["raz", "dwa", "trzy"].arrayToString()).toEqual("raz dwa trzy");
             });
@@ -66,7 +66,7 @@
 
         });
 
-        ddescribe("countCharInProperties", function () {
+        describe("countCharInProperties", function () {
             it('Should return value exist a letter in name properties', function () {
                 expect(answer.countCharInProperties(answer.aqurium, 'a')).toEqual(7);
                 expect(answer.countCharInProperties(answer.aqurium, 'b')).toEqual(0);
@@ -77,7 +77,7 @@
             });
         });
 
-        ddescribe("Number.prototype.addNumber", function () {
+        describe("Number.prototype.addNumber", function () {
             it('Should return added two numbers', function () {
                 var temp = 123;
                 expect(temp.addNumber(5)).toEqual(128);
@@ -91,7 +91,7 @@
             });
         });
 
-        ddescribe("Number.prototype.maxValueFromTwoArguments", function () {
+        describe("Number.prototype.maxValueFromTwoArguments", function () {
             it('Should return max value from two arguments and this', function () {
                 var temp = 123;
                 expect(temp.maxValueFromTwoArguments(1, 200)).toEqual(200);
@@ -102,7 +102,7 @@
                 expect(temp.maxValueFromTwoArguments(34525, 213)).toEqual(34525);
             });
         });
-        ddescribe('getWidth', function () {
+        describe('getWidth', function () {
             it('should return array of width', function () {
                 expect(answer.getWidth(answer.boxlist)).toEqual(["box1: 5", "box2: 2", "box3: 7"]);
 
@@ -113,14 +113,14 @@
             });
         });
 
-        ddescribe('getVolume', function () {
+        describe('getVolume', function () {
             it('should return volume of boxes in string array, last element should be sum of all volumes saved as number', function () {
                 expect(answer.getVolume(answer.boxlist)).toEqual(["box1 volume: 250", "box2 volume: 98", "box3 volume: 350", 698]);
             });
 
         });
 
-        ddescribe('getMaxVolume', function () {
+        describe('getMaxVolume', function () {
             it('should max volume from array contains boxes', function () {
                 expect(answer.getMaxVolume(answer.boxlist)).toEqual(350);
             });

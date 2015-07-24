@@ -38,7 +38,10 @@
             box3: {height: 10, width: 7, length: 5}
         },
 
-        propertyNames: function (customObject) {
+        person:{ firstName: 'tabaluga', secondName: 'czerwonyKapturek', age: 5},
+
+
+            propertyNames: function (customObject) {
             var arr = [];
             for (var x in customObject) {
                 arr.push([x, customObject[x]]);
@@ -102,10 +105,32 @@
 
         getMaxVolume: function(boxList){
             return 350;
+        },
+
+        changePropertyName: function(object, propertyToChange, newName){
+            var x;
+            if(object.hasOwnProperty(propertyToChange)){
+                x = object[propertyToChange];
+                delete object[propertyToChange];
+                object[newName] = x;
+                return true;
+            }
+            else{
+                return false;
+            }
+        },
+
+        makeObject: function(twoDimArray){
+            var obj = {};
+            var i;
+            for (i=0;i<twoDimArray.length;i++) {
+                if(twoDimArray[i].length !== 2) {
+                    return false;
+                }
+                obj[twoDimArray[i][0]] = twoDimArray[i][1];
+            }
+            return obj;
         }
-
-
-
 
     }
 
