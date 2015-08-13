@@ -21,7 +21,7 @@ describe('day5', function () {
         });
     });
 
-    describe('ARMORY', function () {
+    ddescribe('ARMORY', function () {
         describe('Testing function flush function', function () {
 
             it('Should return 0 if flushWeapon is success', function () {
